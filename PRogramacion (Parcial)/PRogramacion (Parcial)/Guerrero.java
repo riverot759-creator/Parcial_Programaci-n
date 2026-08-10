@@ -14,7 +14,7 @@ public class Guerrero extends Personaje {
         this.fuerza = fuerza;
         this.defensa = defensa;
         this.stamina = stamina;
-        this.maxStamina = stamina;
+        this.maxStamina = 100;
         this.ataques = new ArrayList<>();
         this.mascota = null;
 

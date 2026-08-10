@@ -15,7 +15,8 @@ public class Main {
             System.out.println("4. Equipar mascota");
             System.out.println("5. Salir");
             System.out.print("Elige una opción: ");
-            int opcion = Integer.parseInt(sc.nextLine());
+            int opcion = sc.nextInt();
+            sc.nextLine(); 
 
             if (opcion == 1) {
                 guerrero = crearGuerrero(sc);
@@ -51,13 +52,17 @@ public class Main {
         System.out.print("Nombre del guerrero: ");
         String nombre = sc.nextLine();
         System.out.print("Fuerza: ");
-        int fuerza = Integer.parseInt(sc.nextLine());
+        int fuerza = sc.nextInt();
+        sc.nextLine();
         System.out.print("Nivel: ");
-        int nivel = Integer.parseInt(sc.nextLine());
+        int nivel = sc.nextInt();
+        sc.nextLine();
         System.out.print("Defensa: ");
-        int defensa = Integer.parseInt(sc.nextLine());
+        int defensa = sc.nextInt();
+        sc.nextLine();
         System.out.print("Stamina: ");
-        int stamina = Integer.parseInt(sc.nextLine());
+        int stamina = sc.nextInt();
+        sc.nextLine();
 
         Guerrero guerrero = new Guerrero(nombre, 100, fuerza, nivel, defensa, stamina);
         guerrero.getInventario().agregarItem(new ObjetosMagicos("Poción de salud", "Salud", 20));
@@ -71,11 +76,14 @@ public class Main {
         System.out.print("Nombre del mago: ");
         String nombre = sc.nextLine();
         System.out.print("Mana: ");
-        int mana = Integer.parseInt(sc.nextLine());
+        int mana = sc.nextInt();
+        sc.nextLine();
         System.out.print("Inteligencia: ");
-        int inteligencia = Integer.parseInt(sc.nextLine());
+        int inteligencia = sc.nextInt();
+        sc.nextLine();
         System.out.print("Nivel: ");
-        int nivel = Integer.parseInt(sc.nextLine());
+        int nivel = sc.nextInt();
+        sc.nextLine();
 
         Mago mago = new Mago(nombre, 100, mana, inteligencia, nivel);
         mago.getInventario().agregarItem(new ObjetosMagicos("Poción de salud", "Salud", 18));
@@ -88,7 +96,8 @@ public class Main {
         System.out.print("Nombre de la mascota: ");
         String nombreMascota = sc.nextLine();
         System.out.print("Lealtad: ");
-        int lealtad = Integer.parseInt(sc.nextLine());
+        int lealtad = sc.nextInt();
+        sc.nextLine();
         return new Mascota(nombreMascota, lealtad);
     }
 

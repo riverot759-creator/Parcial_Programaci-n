@@ -23,11 +23,12 @@ public class Inventario {
         if (items.isEmpty()) {
             System.out.println("El inventario está vacío.");
             return;
-        }
+        }else{
         System.out.println("Objetos en el inventario:");
         for (ObjetosMagicos item : items) {
             System.out.println("- " + item.getNombre() + " (" + item.getTipo() + ", " + item.getPotencia() + ")");
         }
+    }
     }
 
     public boolean usarItem(String nombre, Personaje objetivo) {
